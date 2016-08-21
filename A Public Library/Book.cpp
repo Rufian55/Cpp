@@ -11,7 +11,7 @@ Book::Book(std::string idc, std::string t, std::string a) {
 	title = t;
 	author = a;
 	checkedOutBy = NULL;	// intializes Book checkedOutBy to NULL (noone).
-	requestedBy = NULL;		// initiailizes Book requestedBy to NULL (noone).
+	requestedBy = NULL;	// initiailizes Book requestedBy to NULL (noone).
 	location = ON_SHELF;	// initializes Book location to ON_SHELF.
 }
 
