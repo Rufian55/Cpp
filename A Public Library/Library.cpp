@@ -6,6 +6,10 @@
 ** system of checkout with menetary accountabilty for return.
 **********************************************************************************************************/
 #include "Library.hpp"
+#include <iostream>
+using std::cout;
+using std::endl;
+
 
 Library::Library(){
 	currentDate = 0;
@@ -215,12 +219,6 @@ Book * Library::getBook(std::string bID){
 	return ptr;
 }
 
-
-#include "Library.hpp"
-#include <iostream>
-
-using std::cout;
-using std::endl;
 
 int main() {
 	Book b1("123", "War and Peace", "Tolstoy");
