@@ -41,7 +41,7 @@ double Point::getYCoord() {
 }
 
 /*********************************************************************************************************
-									Function: distanceTo()
+					Function: distanceTo()
 ** Description: Returns the distance between two points. Utilized by appending the function call
 ** after the first point via a dot operator with the second point taken as a parameter of type Point.
 ** Example: double dist = p1.distanceTo(p2);
