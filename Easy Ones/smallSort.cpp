@@ -30,8 +30,8 @@ int main() {
 
 
 /**********************************************************************************************************
-** Description: Function smallSort() accepts a three int parameters by reference, sorts them, and returns
-** them to the where smallSort() was called from. Function will sort correctly even if two inputs are equal.
+** Description: Function smallSort() accepts three int parameters by reference, sorts them in place, 
+** Function will sort correctly even if two inputs are equal.
 ***********************************************************************************************************/
 void smallSort(int &a, int &b, int &c) {
 	int tempA;	// Temporary holding variable for lowest number.
