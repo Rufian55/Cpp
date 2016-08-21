@@ -11,29 +11,20 @@ using std::endl;
 
 int main() {
 	// Assume the 50-cent piece is no longer in circulation.
-	int quarters,
-		dimes,
-		nickels,
-		pennies,
-		userAmount,	// Holds amount entered by user.
-		looseChange;	// Remaining cents to be processed as program executes.
+	int quarters, dimes, nickels, pennies,
+	    userAmount,		// Holds amount entered by user.
+	    looseChange;	// Remaining cents to be processed as program executes.
 
 	cout << "Please enter an amount in cents, no decimal, less than a dollar." << endl;
 
 	cin >> userAmount;
 
 	quarters = userAmount / 25;
-
 	looseChange = userAmount % 25;
-
 	dimes = looseChange / 10;
-
 	looseChange %= 10;
-
 	nickels = looseChange / 5;
-
 	pennies = looseChange %= 5;
-
 
 	cout << "Your change will be:" << endl;
 
