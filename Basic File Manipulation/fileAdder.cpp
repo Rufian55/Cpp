@@ -31,7 +31,7 @@ int main() {
 		while (inputFile >> holder) {
 			sumVar += holder;
 		}
-		inputFile.close();// Closes the file once we are done readng it. 
+		inputFile.close();
 	}
 
 	else {
