@@ -11,7 +11,7 @@ int main() {
 	// creates a pointer and stores the address of x
 	int *ptrx = &x;
 
-	cout << "the value of x is: " << x << endl;			// outputs 10
+	cout << "the value of x is: " << x << endl;		// outputs 10
 	cout << "the address of x is: " << &x << endl;		// outputs hex memory address of "10"
 
 	cout << endl << endl;
