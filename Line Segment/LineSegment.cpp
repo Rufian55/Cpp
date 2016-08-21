@@ -34,7 +34,7 @@ LineSegment::LineSegment(Point p1, Point p2) {
 
 
 /*********************************************************************************************************
-										Function: length()
+					Function: length()
 ** Description: Returns the distance between the two Points of a LineSegment. Utilized by appending the
 ** function call distanceTo() [see file Point.cpp] after the first point via a dot operator with the 
 ** second point taken as a parameter of type Point.
@@ -50,7 +50,7 @@ double LineSegment::length() {
 
 
 /*********************************************************************************************************
-									Function: slope()
+					Function: slope()
 ** Description: Returns the slope of the lineSegment between two Points. Utilized by first extracting our
 ** lineSegment's Point's x and y coordinates and applying those to the mathmatical method m=dy/dx.
 ** Example: double slope = ls1.slope(); where ls1 is a lineSegment.
