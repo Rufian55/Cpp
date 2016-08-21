@@ -16,7 +16,7 @@ using std::endl;
 
 int main() {
 	std::string filename;		// Our users file name will be held as a string called "filename".
-	std::ifstream inputFile;		// File stream object.
+	std::ifstream inputFile;	// File stream object.
 	std::ofstream outputFile;	// File stream object.
 	int holder = 0;			// Used to read integers as they are read and test for EOF condition.
 	int sumVar = 0;			// USed to sum up the holder variables as they are read.
