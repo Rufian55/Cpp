@@ -19,18 +19,18 @@ enum Locale { ON_SHELF, ON_HOLD_SHELF, CHECKED_OUT };
 
 class Book {
 private:
-	std::string idCode;		// a unique identifier for a Book (think library bar code, not ISBN).
-	std::string title;		// cannot be assumed to be unique.
-	std::string author;		// also assuemed to not be unique.
-	Locale location;		// see enumeration at line 13.
+	std::string idCode;	// a unique identifier for a Book (think library bar code, not ISBN).
+	std::string title;	// cannot be assumed to be unique.
+	std::string author;	// also assuemed to not be unique.
+	Locale location;	// see enumeration at line 13.
 	Patron* checkedOutBy;	// pointer to the Patron who has it checked out (if any).
 	Patron* requestedBy;	// pointer to Patron who requested it (if any); Book can only be requested by 1 Patron at a time.
-	int dateCheckedOut;		// when a book is checked out, this will be set to the currentDate of the Library.
+	int dateCheckedOut;	// when a book is checked out, this will be set to the currentDate of the Library.
 
 public:
-	static const int CHECK_OUT_LENGTH = 21;				// 21 days, no more, no less.
+	static const int CHECK_OUT_LENGTH = 21;			// 21 days, no more, no less.
 	Book(std::string idc, std::string t, std::string a);	// Prototype Book constructor
-	int getCheckOutLength();							// returns 21
+	int getCheckOutLength();				// returns 21
 	std::string getIdCode();
 	std::string getTitle();
 	std::string getAuthor();
