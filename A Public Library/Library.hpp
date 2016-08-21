@@ -14,8 +14,8 @@ class Library {
 private:
 	std::vector<Book*> holdings;	// a vector of pointers to Books in the Library
 	std::vector<Patron*> members;	// a vector of pointers to Patrons in the Library
-	int currentDate;			/* Stores the current date represented as an integer number
-							   of "days" since the Library object was created. */
+	int currentDate;		/* Stores the current date represented as an integer number
+					   of "days" since the Library object was created. */
 public:
 	Library();
 	void addBook(Book*);
