@@ -271,4 +271,6 @@ int main() {
 	double p2Fine = p2.getFineAmount();
 	cout << "Patron p1 fine is " << p1Fine << endl;
 	cout << "Patron p2 fine is " << p2Fine << endl;
+	
+	return 0;
 }
