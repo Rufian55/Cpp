@@ -18,7 +18,7 @@ using std::endl;
 vector<int> findMode(int anArray[], int size); 
 
 /**********************************************************************************************************
-										function findMode()
+				function findMode()
 ** Description: findMode() is a function that returns a vector containing the mode(s)
 ** of an input array. The returned vector will behave as follows:
 ** 1. If there is just a single most frequent value, the vector will only contain that one value.
