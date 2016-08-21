@@ -12,9 +12,9 @@ using std::endl;
 
 int main() {
 	int  numberOfValues,	// User inputted number of integers to be inputted.
-		value,			// User inputted actual integer values to be "min-maxed".
-		min = 0,			// Resulting minimimum value.
-		max = 0;			// Resulting maximum value.
+		value,		// User inputted actual integer values to be "min-maxed".
+		min = 0,	// Resulting minimimum value.
+		max = 0;	// Resulting maximum value.
 
 	do {
 		cout << "How many integers would you like to enter?" << endl;
