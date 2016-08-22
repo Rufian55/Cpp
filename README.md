@@ -1,2 +1,2 @@
 # Cpp
-C++ Various interesting projects.
+C++ Various interesting beginner projects.
