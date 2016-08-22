@@ -1,24 +1,23 @@
+/*********************************************************************************
+ * A C++ Virtual Functions Demo Program.
+*********************************************************************************/
 #include <iostream>
 #include <cmath>
 
 enum { NOCOLOR, PURPLE, RED, BLUE, GREEN, BLACK, CYAN, MAGENTA, YELLOW };
 
-
 class shape {
 public:
-	shape()
-	{
+	shape() {
 		this->side_count = -1;
 		this->color = NOCOLOR;
 	}
 
-	shape(int sides)
-	{
+	shape(int sides) {
 		this->side_count = sides;
 	}
 
-	virtual double area()
-	{
+	virtual double area() {
 		if (side_count == -1) {
 			return -17;
 		}
@@ -27,8 +26,7 @@ public:
 		}
 	}
 
-	virtual double perimeter()
-	{
+	virtual double perimeter() {
 		return 0;
 	}
 
@@ -45,28 +43,24 @@ private:
 
 class triangle : public shape {
 public:
-	triangle() : shape(3)
-	{
+	triangle() : shape(3) {
 		this->side1 = 0;
 		this->side2 = 0;
 		this->side3 = 0;
 	}
 
-	triangle(double side1, double side2, double side3) : shape(3)
-	{
+	triangle(double side1, double side2, double side3) : shape(3) {
 		this->side1 = side1;
 		this->side2 = side2;
 		this->side3 = side3;
 	}
 
-	std::string name()
-	{
+	std::string name() {
 		return std::string("TRIANGLE");
 	}
 
 	//use semi-perimeter area formula: sqrt(s(s-a)(s-b)(s-c))
-	double area()
-	{
+	double area() {
 		double s = this->perimeter() / 2;
 		return std::sqrt(s *
 			(s - this->side1) *
