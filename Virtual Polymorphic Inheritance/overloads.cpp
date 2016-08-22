@@ -1,69 +1,56 @@
+/*******************************************************************
+ * A C++ Overload Demo Program.
+********************************************************************/
 #include <iostream>
 
 class integer{
 private:
 	int val;
-
 public:
-
-	integer(int value)
-	{
+	integer(int value) {
 		this->val = value;
 	}
 
-	integer()
-	{
+	integer() {
 		this->val = 0;
 	}
 
-	integer& operator=(const integer &RHS)
-	{
+	integer& operator=(const integer &RHS) {
 		this->val = RHS.val;
-
 		return *this;
 	}
 
-	integer(integer &value)
-	{
+	integer(integer &value)	{
 		this->val = value.val;
 	}
 
-	~integer()
-	{
+	~integer() {
 		//intentionally left empty
 	}
 
-	int value()
-	{
+	int value() {
 		return this->val;
 	}
 
-	int value() const
-	{
+	int value() const {
 		return this->val;
 	}
 
-	void set_value(int value)
-	{
+	void set_value(int value) {
 		this->val = value;
 	}
 
 	//++i
-	integer& operator++()
-	{
+	integer& operator++() {
 		++(this->val);
-
 		return *this;
 	}
 
 
 	//i++
-	integer& operator++(int ignored)
-	{
+	integer& operator++(int ignored) {
 		integer returned = integer(this->val);
-
 		++(this->val);
-
 		return returned; //return integer(--(this->val));
 	}
 
@@ -76,43 +63,35 @@ public:
 	//overloading as operator:
 	//integer b;
 	//b.operator*(c); ----- b * c
-	const integer operator*(const integer &RHS)
-	{
+	const integer operator*(const integer &RHS) {
 		return integer(this->val * RHS.val);
 	}
 
 };
 
 //Stream insertion operator overloading.
-std::ostream& operator<<(std::ostream &outs, const integer& foo)
-{
+std::ostream& operator<<(std::ostream &outs, const integer& foo) {
 	outs << foo.val;
-	
 	return outs;
 }
 
 //Stream extraction operator overloading.
-std::istream& operator>>(std::istream &in, integer &foo)
-{
+std::istream& operator>>(std::istream &in, integer &foo) {
 	in >> foo.val;
-
 	return in;
 }
 
 //friend function -- can access variables directly
-const integer operator-(const integer &LHS, const integer &RHS)
-{
+const integer operator-(const integer &LHS, const integer &RHS) {
 	return integer(LHS.val - RHS.val);
 }
 
 //completely unrelated function -- must use accessors
-const integer operator+(const integer &LHS, const integer &RHS)
-{
+const integer operator+(const integer &LHS, const integer &RHS) {
 	return integer(LHS.value() + RHS.value());
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
 	integer a(3);
 	integer b(7);
 	
@@ -130,9 +109,6 @@ int main(int argc, char **argv)
 
 	std::cout << "3 * c = " << (c * 3).value() << std::endl;
 	std::cout << "3 + c = " << (3 + c).value() << std::endl;
-
-	
-
 
 	return 0;
 }
