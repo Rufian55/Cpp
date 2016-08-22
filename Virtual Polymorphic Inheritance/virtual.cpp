@@ -7,6 +7,9 @@
 enum { NOCOLOR, PURPLE, RED, BLUE, GREEN, BLACK, CYAN, MAGENTA, YELLOW };
 
 class shape {
+private:
+	int side_count;
+	int color;
 public:
 	shape() {
 		this->side_count = -1;
@@ -34,14 +37,15 @@ public:
 	// {
 	// 	return std::string("SHAPE");
 	// }
-
-private:
-	int side_count;
-	int color;
 };
 
 
 class triangle : public shape {
+private:
+protected:
+	double side1;
+	double side2;
+	double side3;
 public:
 	triangle() : shape(3) {
 		this->side1 = 0;
@@ -69,70 +73,52 @@ public:
 			);
 	}
 
-	double perimeter()
-	{
+	double perimeter() {
 		return this->side1 + this->side2 + this->side3;
 	}
-
-protected:
-	double side1;
-	double side2;
-	double side3;
-
-private:
-
 };
 
 class rectangle : public shape {
+private:
+protected:
+	double side1;
+	double side2;
 public:
-	rectangle() : shape(4)
-	{
+	rectangle() : shape(4) {
 		this->side1 = 0;
 		this->side2 = 0;
 	}
 
-	rectangle(double side1, double side2) : shape(4)
-	{
+	rectangle(double side1, double side2) : shape(4) {
 		this->side1 = side1;
 		this->side2 = side2;
 	}
 
-	std::string name()
-	{
+	std::string name() {
 		return std::string("RECTANGLE");
 	}
 
 
 	//use semi-perimeter area formula: sqrt(s(s-a)(s-b)(s-c))
-	double area()
-	{
+	double area() {
 		return this->side1 * this->side2;
 	}
 
-	double perimeter()
-	{
+	double perimeter() {
 		return this->side1 * 2 + this->side2 * 2;
 	}
-
-protected:
-	double side1;
-	double side2;
-
-private:
-
 };
 
 class square : public rectangle {
 
+protected:
 public:
-	square() : rectangle()
-	{
+	square() : rectangle() {
 		this->side1 = 0;
 		this->side2 = 0;
 	}
 
-	square(double side) : rectangle(side, side)
-	{
+	square(double side) : rectangle(side, side) {
 		this->side1 = side;
 		this->side2 = side;
 	}
@@ -143,30 +129,20 @@ public:
 	// 	//additional necessary stuff
 	// }
 
-	std::string name()
-	{
+	std::string name() {
 		return std::string("SQUARE");
 	}
 
-
-	double area()
-	{
+	double area() {
 		return rectangle::area();
 	}
 
-	double perimeter()
-	{
+	double perimeter() {
 		return rectangle::perimeter();
 	}
-
-protected:
-
-private:
-
 };
 
-void print_area(shape *s, std::string name)
-{
+void print_area(shape *s, std::string name) {
 	std::cout << "Area of " << s->name() << " s (should be "
 		<< name << "): " << s->area() << std::endl;
 	std::cout << "Perimeter of " << s->name() << " s (should be "
@@ -174,19 +150,16 @@ void print_area(shape *s, std::string name)
 }
 
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
 	//shape s;
 	triangle *t = new triangle(5, 12, 13);
 	rectangle *r = new rectangle(8, 12.5);
 	square *q = new square(10);
 
-
 	//print_area(&s, "shape");
 	print_area(t, "triangle");
 	print_area(r, "rectangle");
 	print_area(q, "square");
-
 
 	return 0;
 }
