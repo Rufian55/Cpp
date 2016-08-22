@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: ReadMatrix.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/8/2016
 ** Description: Source file: ReadMatrix.cpp. Called by Main.cpp for prompting and reading
 ** in user inputted matrix variables.
