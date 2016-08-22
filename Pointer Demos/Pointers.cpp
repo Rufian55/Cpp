@@ -1,6 +1,6 @@
 /****************************************************************************************
 ** Program Filename: Pointers.cpp
-** Author: Chris Kearns (CS-162-400 W2016)
+** Author: Chris Kearns
 ** Date: 1/19/2016
 ** Description: Source file: Pointers.cpp.
 ** Input: None
@@ -126,24 +126,24 @@ int main() {
 
 	// We declare a struct class called LinkedNode containing int someVar and a pointer 'next'.
 	struct LinkedNode {
-		int someVar;					// The data portion of the struct.
-		LinkedNode *next;				// The pointer to the next node in the list.
+		int someVar;			// The data portion of the struct.
+		LinkedNode *next;		// The pointer to the next node in the list.
 	};
 
-	LinkedNode *head;					// Declare a LinkedNode pointer called head.
-	head = new LinkedNode;				// Instantiate head as a LinkedNode object.
-	head->someVar = 666;				// Set this node's (head) someVar to 666 using the pointer operator.
-	head->next = NULL;					// Set the next pointer to NULL.
+	LinkedNode *head;			// Declare a LinkedNode pointer called head.
+	head = new LinkedNode;			// Instantiate head as a LinkedNode object.
+	head->someVar = 666;			// Set this node's (head) someVar to 666 using the pointer operator.
+	head->next = NULL;			// Set the next pointer to NULL.
 
 	LinkedNode *node2 = new LinkedNode;	// Declare another LinkedNode pointer called node2 and instantiate node2 as a LinkedNode in one line.
-	node2->someVar = 777;				// Set this node's (node2) someVar to 777 using the pointer operator.
-	node2->next = NULL;					// Set this node's (node2) next pointer to NULL.
-	head->next = node2;					// Set the one up in the list node's (head) next pointer to this node (node2). 
+	node2->someVar = 777;			// Set this node's (node2) someVar to 777 using the pointer operator.
+	node2->next = NULL;			// Set this node's (node2) next pointer to NULL.
+	head->next = node2;			// Set the one up in the list node's (head) next pointer to this node (node2). 
 
 	LinkedNode *node3 = new LinkedNode;	// Declare another LinkedNode pointer called node3 and instantiate node3 as a LinkedNode in one line.
-	node3->someVar = 888;				// Set this nodes (node3) someVar to 888 using the pointer operator.
-	node3->next = NULL;					// Set this nodes (node3) next pointer to NULL.
-	node2->next = node3;				// Set the one up in the list node's (node2) next pointer to this node (node3). 
+	node3->someVar = 888;			// Set this nodes (node3) someVar to 888 using the pointer operator.
+	node3->next = NULL;			// Set this nodes (node3) next pointer to NULL.
+	node2->next = node3;			// Set the one up in the list node's (node2) next pointer to this node (node3). 
 
 	// cout the list using the preveious nodes pointer the node being queried.
 	cout << "The 'head' node contains int someVar = " << head->someVar << endl;
