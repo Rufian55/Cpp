@@ -1,5 +1,6 @@
 /*********************************************************************************
- * A C++ Virtual Functions Demo Program.
+ * A C++ Virtual Functions Demo Program.  Note commented out portions of program.
+ * Uncomment and observe the behavior.
 *********************************************************************************/
 #include <iostream>
 #include <cmath>
