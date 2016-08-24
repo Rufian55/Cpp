@@ -3,7 +3,7 @@
 ** Date: 12/3/2015
 ** Description: Library.cpp is the Library class function implementation file and as such has the
 ** Library.hpp specification file included. Program is geared towards a public library, but could be any
-** system of checkout with menetary accountabilty for return.
+** system of checkout with monetary accountabilty for return.
 **********************************************************************************************************/
 #include "Library.hpp"
 #include <iostream>
