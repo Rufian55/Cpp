@@ -84,7 +84,7 @@ int buttomUpCutRod(int n, int *revenue, int *price) {
 	return revenue[n];
 }
 
-// Bottom-up solution for best price and "required cut".
+// Iterative bottom-up solution for best price and "required cuts" O(n^2).
 int extendedButtomUpCutRod(int n, int *revenue, int *price, int *size) {
 	if (revenue[n] != -1)
 		return revenue[n];
