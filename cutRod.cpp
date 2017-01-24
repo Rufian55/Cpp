@@ -41,15 +41,15 @@ void init(int *price, int *revenue) {
 	revenue[0] = 0;
 	price[0] = 0;
 	price[1] = 1;
-	price[2] = 5;
+	price[2] = 3;
 	price[3] = 8;
-	price[4] = 9;
+	price[4] = 10;
 	price[5] = 10;
 	price[6] = 17;
-	price[7] = 17;
+	price[7] = 18;
 	price[8] = 20;
-	price[9] = 24;
-	price[10] = 30;
+	price[9] = 22;
+	price[10] = 28;
 }
 
 // Naive recursive O(2^n) solution.
