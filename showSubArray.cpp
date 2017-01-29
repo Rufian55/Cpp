@@ -1,6 +1,6 @@
 /******************************************************************************
 * Program showSubArray prints to stdout the subarray of arrN[] that totals to
-* the given maxSum.  Interseting use of a C++ STL unordered_map. 
+* the given maxSum.  Interesting use of a C++ STL unordered_map. 
 * Compile: g++ showSubArray.cpp -o showSub -std=c++0x -g -Wall
 * Note need for minimum C++11 for this program to compile.
 ******************************************************************************/
